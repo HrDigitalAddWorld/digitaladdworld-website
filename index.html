@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitalAddWorld</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="project.css">
+  <script src="about.js"></script>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling */
+    }
+  </style>
+</head>
+<body>
+<!-- <! -- Navbar Section--> 
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: linear-gradient(90deg, #29145c, #20c520); color: #fff;">
+  <div class="logo">
+    <img src="images/Companylogo.png" alt="Company Logo" style="height:60px; width:auto;">
+  </div>
+  <nav>
+    <ul style="list-style: none; display: flex; gap: 25px; margin: 0; padding: 0;">
+      <li><a href="index.html#home" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <!-- <li><a href="index.html#services" class="nav-link">Services</a></li> -->
+     
+<li class="dropdown mega-dropdown">
+  <a href="services.html" class="nav-link">Services <i class="fa fa-angle-down"></i></a>
+
+  <!-- Mega Menu -->
+  <div class="mega-menu">
+    <div class="mega-row">
+      
+      <!-- Column 1 -->
+      <div class="mega-col">
+        <h4>Web Design</h4>
+        <ul>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">Logo Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="mega-col">
+        <h4>Website Development</h4>
+        <ul>
+          <li><a href="#">PHP Development</a></li>
+          <li><a href="#">Laravel Development</a></li>
+          <li><a href="#">Node.js Development</a></li>
+          <li><a href="#">React.js Development</a></li>
+          <li><a href="#">Java Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="mega-col">
+        <h4>E-Commerce Development</h4>
+        <ul>
+          <li><a href="#">Magento</a></li>
+          <li><a href="#">Shopify</a></li>
+          <li><a href="#">WooCommerce</a></li>
+          <li><a href="#">BigCommerce</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="mega-col">
+        <h4>Mobile App Development</h4>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">Hybrid App</a></li>
+          <li><a href="#">React Native</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</li>
+
+      <!-- <li><a href="index.html#projects" class="nav-link">Projects</a></li> -->
+      <li><a href="project.html" class="nav-link">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="career.html" class="nav-link">Career</a></li>
+      <li><a href="login.html" class="nav-link">Login</a></li>
+      <li><a href="register.html" class="nav-link">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-slider">
+    <div class="slide active" style="background-image: url('images/img1.png');"></div>
+    <div class="slide" style="background-image: url('images/img2.png');"></div>
+    <div class="slide" style="background-image: url('images/img3.png');"></div>
+     <div class="slide" style="background-image: url('images/image4.png');"></div>
+      <div class="slide" style="background-image: url('images/image5.png');"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>DigitalAddWorld</h1>
+    <p class="tagline-1">Your Powerhouse of Digital Marketing Solutions</p>
+    <p class="tagline-2">We help businesses grow with smart digital marketing solutions.</p>
+    <a href="#contact" class="btn-get-started">Get In Touch</a>
+  </div>
+
+  <!-- Slider navigation -->
+  <div class="slider-nav">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+
+  <!-- Statistics Section -->
+<section id="statistics" style="padding:60px 20px; background:#f2f2f2; text-align:center;">
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="counter" data-target="99">0</div>
+      <p>Happy Customers</p>
+    </div>
+    <div class="stat-card">
+      <div class="counter" data-target="25">0</div>
+      <p>Successful Businesses</p>
+    </div>
+    <div class="stat-card">
+      <div class="counter" data-target="120">0</div>
+      <p>Total Clients</p>
+    </div>
+    <div class="stat-card">
+      <div class="counter" data-target="5">0</div>
+      <p>Stars Reviews</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .stat-card {
+    width: 200px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  .counter {
+    font-size: 2.5em;
+    color: #007BFF;
+  }
+</style>
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 100;
+
+      if(count < target){
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+</script>
+
+<!-- Team Section -->
+<section class="team" style="padding: 60px 20px; text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 40px;">Our Employees</h2>
+  
+  <div class="team-members" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    
+    <!-- Row 1 -->
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+      <img src="https://picsum.photos/150" alt="Employee 1" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin-bottom: 5px;">Sandeep Sharma</h3>
+      <p style="color: #555;">Project Head</p>
+    </div>
+    
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+ <img src="images/Meghaphoto.jpeg" alt="Megha Pandya" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin-bottom: 5px;">Megha Pandya</h3>
+      <p style="color: #555;">Java Developer</p>
+    </div>
+    
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+      <img src="images/Kritikaphoto.jpeg" alt="Kritika Gupta" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+        <h3 style="margin-bottom: 5px;">Kritika Gupta</h3>
+      <p style="color: #555;">HR</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+      <img src="images/Akshyaphoto.jpeg" alt="Akshya Jain" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin-bottom: 5px;">Akshya Jain</h3>
+      <p style="color: #555;">Python Developer</p>
+    </div>
+    
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+        <img src="images/Shrishtiphoto.jpg" alt="Shrishti Kumari" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin-bottom: 5px;">Shrishti Kumari</h3>
+      <p style="color: #555;">Backend Developer</p>
+    </div>
+    
+    <div class="member" style="width: 200px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s;">
+  <img src="images/Ankitphoto.jpeg" alt="Ankit Jaiswal" style="width: 100%; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin-bottom: 5px;">Ankit Jaiswal</h3>
+      <p style="color: #555;">Full Stack Developer</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .team-members {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+<!-- Services Section -->
+
+<!-- <section id="services" style="padding: 60px 20px; background-color: #f9f9f9; text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 10px;">Our Services</h2>
+  <p style="font-size: 1.2em; color: #555; margin-bottom: 40px;">Services Built Specifically For Your Business</p>
+  
+  <div class="services-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+     -->
+    <!-- Web Design Card -->
+    <!-- <div class="service-card">
+      <h3>Web Design</h3>
+      <p>We create visually appealing and user-friendly web designs for your brand.</p>
+      <div class="more-content">
+        <p>
+          Our designs focus on responsive layouts, UX/UI optimization, and brand consistency. 
+          We ensure your website looks great on all devices and provides a seamless user experience.
+          Typography, colors, and interactive elements are carefully chosen to engage visitors and reflect your brand identity.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div>
+
+    <!-- Web Development Card -->
+    <!-- <div class="service-card">
+      <h3>Web Development</h3>
+      <p>We build fast, secure, and scalable websites tailored to your needs.</p>
+      <div class="more-content">
+        <p>
+          Our development includes CMS solutions, e-commerce integration, and backend optimization. 
+          We focus on performance, security, and cross-device compatibility. 
+          Regular updates, testing, and analytics ensure your website stays reliable and efficient.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div> --> 
+
+    <!-- App Development Card -->
+    <!-- <div class="service-card">
+      <h3>App Development</h3>
+      <p>We create high-performance mobile apps for both Android and iOS.</p>
+      <div class="more-content">
+        <p>
+          Our apps are intuitive, feature-rich, and user-friendly. 
+          We integrate push notifications, analytics, and smooth cross-platform functionality. 
+          The design focuses on engaging user experience, responsive layouts, and fast performance.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div> -->
+
+    <!-- Web Security Card -->
+    <!-- <div class="service-card">
+      <h3>Web Security</h3>
+      <p>We provide complete web security solutions to protect your site from threats.</p>
+      <div class="more-content">
+        <p>
+          Our services include SSL setup, vulnerability scanning, firewalls, and real-time monitoring. 
+          We ensure your website and users remain safe from potential cyber attacks. 
+          Regular security audits and updates help maintain continuous protection.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div> -->
+
+    <!-- Digital Marketing Card -->
+    <!-- <div class="service-card">
+      <h3>Digital Marketing</h3>
+      <p>We help you reach your audience and grow your online presence effectively.</p>
+      <div class="more-content">
+        <p>
+          Our digital marketing services cover SEO, social media, PPC, email campaigns, and content strategy. 
+          We aim to boost engagement, generate leads, and increase sales for your business. 
+          Performance tracking and analytics allow us to optimize campaigns for maximum results.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div>
+     -->
+  <!-- </div>
+</section> -->
+
+<!-- <style>
+.service-card {
+    background: #fff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.service-card p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.service-card .more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.service-card.expanded .more-content {
+    max-height: 300px; /* adjust according to content */
+}
+
+.service-card .read-more {
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background-color: #e6f0ff;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+</style>
+
+<script>
+document.querySelectorAll('.service-card .read-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.parentElement;
+        card.classList.toggle('expanded');
+        const isExpanded = card.classList.contains('expanded');
+        btn.innerText = isExpanded ? 'Read Less' : 'Read More';
+        btn.style.color = isExpanded ? '#28a745' : '#007BFF';
+    });
+});
+</script> -->
+
+<!-- Projects Section -->
+<!-- <section id="projects" style="padding:60px 20px; text-align:center; background:#f9f9f9;">
+  <h2 style="font-size:2.5em; margin-bottom:40px;">Our Projects</h2>
+  
+  <div class="projects-container"> -->
+    
+    <!-- Project 1 -->
+    <!-- <div class="project-card">
+      <div class="logo-wrapper">
+        <img src="images/DigitalPay.png" alt="Digital Payment Project">
+      </div>
+      <h3>E-Wallet</h3>
+      <p>Secure and fast digital payment solution enabling cashless transactions.</p>
+      <div class="more-content">
+        <p>
+          With features like wallet-to-wallet transfers, utility bill payments, and instant recharges, 
+          it provides a seamless financial experience. Users can track expenses, set up alerts, 
+          and enjoy enhanced security features like biometric login and encryption for safe transactions.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div> -->
+    
+    <!-- Project 2 -->
+    <!-- <div class="project-card">
+      <div class="logo-wrapper">
+        <img src="images/Ecommerce.jpeg" alt="E-commerce Project">
+      </div>
+      <h3>E-Store</h3>
+      <p>Quick local delivery for products within a 3 km radius.</p>
+      <div class="more-content">
+        <p>
+          Customers can shop electronics, groceries, and daily essentials with fast and reliable delivery. 
+          Integrated payment options, order tracking, and personalized recommendations enhance the shopping experience.
+          The platform supports promotions, discounts, and loyalty points to reward frequent customers.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div> -->
+    
+    <!-- Project 3 -->
+    <!-- <div class="project-card">
+      <div class="logo-wrapper">
+        <img src="images/eskillgame-logo.png" alt="E-Skill Game Logo">
+      </div>
+      <h3>E-Skill Game</h3>
+      <p>Engaging online platform to play skill-based games and win rewards.</p>
+      <div class="more-content">
+        <p>
+          Users can test and improve skills while enjoying interactive gameplay. 
+          The platform offers tournaments, leaderboards, and reward points. 
+          Real-time multiplayer mode and diverse game categories keep players engaged and entertained.
+        </p>
+      </div>
+      <span class="read-more">Read More</span>
+    </div>
+     -->
+  <!-- </div>
+</section>
+<script> -->
+<!-- document.querySelectorAll('.project-card .read-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.parentElement;
+        card.classList.toggle('expanded'); // toggles max-height in CSS
+        const isExpanded = card.classList.contains('expanded');
+        btn.innerText = isExpanded ? 'Read Less' : 'Read More';
+        btn.style.color = isExpanded ? '#28a745' : '#007BFF';
+    });
+});
+</script> -->
+
+<section id="contact" style="padding:60px 20px; text-align:center; background:#f9f9f9;">
+  <h2>Contact Us</h2>
+  <form id="contact-form" style="max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" required style="padding:10px; border-radius:5px; border:1px solid #ccc;"></textarea>
+
+    <button type="submit" style="padding:12px 25px; background:#007BFF; color:#fff; border:none; border-radius:5px; cursor:pointer;">
+      Send Message
+    </button>
+  </form>
+
+  <!-- Firebase scripts -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbtGJEvmzoBBZAL6Gek32JmiUBP9DUg0Q",
+      authDomain: "digitalmarketingwebsite-cf2de.firebaseapp.com",
+      projectId: "digitalmarketingwebsite-cf2de",
+      storageBucket: "digitalmarketingwebsite-cf2de.firebasestorage.app",
+      messagingSenderId: "279934072725",
+      appId: "1:279934072725:web:883cb1e3d78b347bb5a89c"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Handle form submit
+    const contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault(); // Prevent page reload
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      try {
+        // Add a new document in Firestore "contacts" collection
+        await addDoc(collection(db, "contacts"), {
+          name: name,
+          email: email,
+          message: message,
+          createdAt: serverTimestamp()
+        });
+
+        alert("Message sent successfully!");
+        contactForm.reset(); // Clear form
+      } catch (error) {
+        console.error("Error saving message:", error);
+        alert("Error sending message. Try again.");
+      }
+    });
+  </script>
+</section>
+
+<!-- Footer Section -->
+<footer style="background:#35309c; color:#fff; padding:60px 20px; font-family:Arial, sans-serif; line-height:1.8;">
+  <!-- Company Info -->
+  <h2 style="text-align:center; margin-bottom:20px; font-size:2em;">DigitaladdworldTech</h2>
+  <p style="max-width:700px; margin:0 auto 40px auto; text-align:center;">
+    We at <strong>Digitaladdworld Tech</strong> are proud to say that we are a top-notch digital marketing agency fully committed to providing innovative IT Solutions. Since January 16, 2023, we have quickly become a trusted partner for businesses aiming to elevate their online presence.
+  </p>
+
+  <!-- Offices Grid -->
+  <div class="footer-offices" style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap; margin-bottom:40px;">
+    <div class="office" style="flex:1; min-width:250px; background:#4e793e; padding:20px; border-radius:8px; text-align:center;">
+      <h3 style="color:#98FB98; margin-bottom:10px;">🏢 Delhi Office</h3>
+      <p>Shankar Garden, Vikaspuri,<br> Delhi, India. 110018</p>
+    </div>
+    <div class="office" style="flex:1; min-width:250px; background:#53984d; padding:20px; border-radius:8px; text-align:center;">
+      <h3 style="color:#98FB98; margin-bottom:10px;">🏢 Jaipur Office</h3>
+      <p>P NO 8, near VPM Classes, B Yojna, Radha Kunj,<br> Mansarovar, Jaipur, Rajasthan 302020</p>
+    </div>
+  </div>
+
+  <!-- Contact Email Links -->
+  <div style="text-align:center; margin-bottom:30px;">
+    <h3 style="margin-bottom:10px;">✉️ Connected On</h3>
+
+    <!-- Original mailto link -->
+    <a href="mailto:hrteam@digitaladdworld.in?subject=Inquiry%20from%20Website&body=Hi%20Team,%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back.%0A%0AThanks!" 
+       style="color:#000000; font-weight:bold; text-decoration:none; font-size:1.1em; display:block; margin-bottom:10px;">
+      hrteam@digitaladdworld.in
+    </a>
+
+    <!-- Gmail compose button -->
+    <button onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hrteam@digitaladdworld.in&su=Inquiry%20from%20Website&body=Hi%20Team,%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back.%0A%0AThanks!', '_blank')" 
+            style="background:#000000; border:none; padding:10px 20px; font-weight:bold; color:#fff; cursor:pointer; border-radius:5px; font-size:1em;">
+      Send Email via Gmail
+    </button>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="social-icons" style="text-align:center; margin-bottom:20px;">
+    <a href="https://www.facebook.com/digitaladdworld.in" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/digitaladdworld_/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com/digitaladdworld_/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+
+  <!-- Hover Effect for Icons -->
+  <style>
+    footer a:hover {
+      color: #726a3b;
+    }
+  </style>
+
+  <!-- Copyright -->
+  <p style="text-align:center; font-size:0.9em; color:#ccc;">© 2025 Digitaladdworld, All rights reserved.</p>
+</footer>
+
+
+<!-- Contact Form JS -->
+<script>
+const form = document.querySelector('#contact-form');
+const messageBox = document.createElement("div");
+messageBox.style.marginTop = "10px";
+messageBox.style.fontWeight = "bold";
+form.insertAdjacentElement("afterend", messageBox);
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await response.json();
+    messageBox.textContent = "✅ " + data.message;
+    messageBox.style.color = "green";
+    form.reset();
+
+  } catch (err) {
+    messageBox.textContent = "❌ Error: " + err.message;
+    messageBox.style.color = "red";
+  }
+});
+</script>
+
+
+<!-- Slide JS (if needed) -->
+<script>
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if(i === index) slide.classList.add('active');
+  });
+}
+
+// Next Slide
+if(next) next.addEventListener('click', () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+});
+
+// Previous Slide
+if(prev) prev.addEventListener('click', () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
+// Auto Slide every 5 seconds
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 5000);
+</script>
+
+  
+</body>
+</html>

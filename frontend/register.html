@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>Register</h2>
+
+      <form id="registerForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Enter Email" required />
+        <input type="password" id="password" placeholder="Enter Password" required />
+        <button type="submit">Register</button>
+      </form>
+
+      <p>Already have an account? <a href="login.html">Login</a></p>
+
+      <div id="message"></div>
+    </div>
+  </div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyDbtGJEvmzoBBZAL6Gek32JmiUBP9DUg0Q",
+  authDomain: "digitalmarketingwebsite-cf2de.firebaseapp.com",
+  projectId: "digitalmarketingwebsite-cf2de",
+  storageBucket: "digitalmarketingwebsite-cf2de.firebasestorage.app",
+  messagingSenderId: "279934072725",
+  appId: "1:279934072725:web:883cb1e3d78b347bb5a89c"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const form = document.getElementById("registerForm");
+const messageDiv = document.getElementById("message");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  messageDiv.innerHTML = "";
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim().toLowerCase();
+  const password = document.getElementById("password").value;
+
+  try {
+    // Create user in Firebase Auth
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Save extra info in Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      name,
+      email,
+      createdAt: new Date().toISOString()
+    });
+
+    messageDiv.className = "success message";
+    messageDiv.textContent = "Registration successful!";
+
+  } catch (err) {
+    console.error("Error:", err);
+    messageDiv.className = "error message";
+
+    if (err.code === "auth/email-already-in-use") {
+      messageDiv.textContent = "This email is already registered!";
+    } else if (err.code === "auth/invalid-email") {
+      messageDiv.textContent = "Invalid email!";
+    } else if (err.code === "auth/weak-password") {
+      messageDiv.textContent = "Password must be at least 6 characters!";
+    } else {
+      messageDiv.textContent = err.message;
+    }
+  }
+});
+</script>
+
+</body>
+</html>

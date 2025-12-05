@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "firebase": "^12.3.0",
+    "firebase-admin": "^13.6.0"
+  },
+  "name": "digital_marketing_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
